@@ -30,7 +30,9 @@ def check_if_logged_in(driver_instance):
 class Test(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+
+        cService = webdriver.ChromeService(executable_path='/usr/bin/chromedriver')
+        self.driver = webdriver.Chrome(service=cService)
         self.driver.maximize_window()
         self.driver.get('https://tapsshop.pl/')
 
