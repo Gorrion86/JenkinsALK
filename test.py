@@ -40,3 +40,6 @@ class Test(unittest.TestCase):
     def test1_login(self):
         login(self.driver)
         self.assertTrue(check_if_logged_in(self.driver))
+
+    def test2_empty(self):
+        pass
